@@ -1,0 +1,26 @@
+
+<html>
+    <head>
+        <title>HTML 5 Tutorial Sample</title>
+
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headScript(); ?>
+
+    </head>
+    <!-- Defining Header -->
+    <header>
+        <h1>HTML 5 Tutorial Sample </h1>
+    </header>
+    <!-- Defining Navigation -->
+    <nav>
+        <?php echo $this->navigation()->menu(); ?>
+    </nav>
+
+    <?php echo $this->layout()->content; ?>
+
+
+    <!-- Defining Footer -->
+    <footer>
+        <section>Anything you want to put in footer goes here. </section>
+    </footer>
+</html>

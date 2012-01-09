@@ -1,0 +1,61 @@
+<style type="text/css">
+.message-success, .message-error, .message-info, .message-warning{
+    border: 1px solid;
+    margin: 15px 5px;
+    padding:15px 20px 15px 55px;
+    font: bold 12px verdana;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    text-shadow: 2px 2px 2px #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-repeat:no-repeat;
+    background-position: 10px center;
+}
+
+.message-success {
+    background-color: #DFF2BF;
+    color: #4F8A10;
+    background-image:url('/images/icon-tick.png');
+
+
+}
+
+.message-error {
+    background-color: #FFBABA;
+    color: #D8000C;
+    background-image:url('/images/icon-cross.png');
+}
+
+.message-info {
+    background-color: #BDE5F8;
+    color: #00529B;
+    background-image:url('/images/icon-info.png');
+}
+
+.message-warning {
+    background-color: #FEEFB3;
+    color: #9F6000;
+    background-image:url('/images/icon-warning.png');
+}
+</style>
+<div id="message-box" class="message-<?php echo $this->mesType ?>" >
+    <?php $sMsgString = '';?>
+    <?php $sMsgString .= '<ul>' ?>
+        <?php if(is_array($this->message) ) :?>
+
+            <?php foreach( $this->message as $index => $value ) : ?>
+                <?php $sMsgString .= '<li>' . $value . '</li>' ?>
+            <?php endforeach ?>
+
+        <?php else: ?>
+
+            <?php $sMsgString .= '<li>' . $this->message . '</li>' ?>
+
+        <?php endif ?>
+    <?php $sMsgString .= '</ul>' ?>
+    <?php echo $sMsgString  ?>
+</div>
+

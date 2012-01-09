@@ -1,0 +1,45 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink(); ?>
+    <?php echo $this->headStyle(); ?>
+    <?php echo $this->headScript(); ?>
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+    	    <?php //echo $this->partial('header.phtml', array('loggedIn' => $this->loggedIn, 'user' => $this->user));?>
+            <!--header-->
+        </div>
+        <div id="navbar">
+            <?php //echo $this->layout()->menu; ?>
+            <!--hmenu-->
+
+            <div id="menu">
+                <?php echo $this->navigation()->menu(); ?>
+            </div>
+            <div id="breadcrumbs">
+                You are in: <?php echo $this->navigation()->breadcrumbs()->setLinkLast(false)->setMinDepth(0)->render(); ?>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="content">
+                <?php echo $this->layout()->content; ?>
+            </div>
+            <div id="sidebar">
+                <?php //echo $this->render('sidebar.phtml'); ?>
+                    <!--hsidebare-->
+            </div>
+        </div>
+        <div id="footer">
+            <?php //echo $this->partial('footer.phtml'); ?>
+            <!--hfooter-->
+        </div>
+    </div>
+<?php echo $this->inlineScript(); ?>
+</body>
+</html>
+

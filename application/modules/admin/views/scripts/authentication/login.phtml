@@ -1,0 +1,6 @@
+<div class="login">
+	<?php if ($this->failed) : ?>
+	<div class="error">Gebruikersnaam of wachtwoord onjuist</div>
+	<?php endif; ?>
+<?php echo $this->form->render(); ?>
+</div>

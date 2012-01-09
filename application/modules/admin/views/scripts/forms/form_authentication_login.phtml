@@ -1,0 +1,36 @@
+admin user:admin
+admin pass:nfahnfah
+<form enctype="application/x-www-form-urlencoded"
+    method="<?php echo $this->escape($this->element->getMethod()) ?>"
+    action="<?php echo $this->escape($this->element->getAction()) ?>">
+
+	<?php //echo $this->element->redirect->renderViewHelper() ?>
+	<?php //echo $this->element->redirect->renderErrors() ?>
+
+    <table class="zend-form">
+        <tr>
+            <td class="input-label">
+                <?php echo $this->element->username->renderLabel() ?>
+            </td>
+            <td class="input-text">
+                <?php echo $this->element->username->renderViewHelper() ?>
+                <?php echo $this->element->username->renderErrors() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="input-label">
+                <?php echo $this->element->password->renderLabel() ?>
+            </td>
+            <td class="input-text">
+                <?php echo $this->element->password->renderViewHelper() ?>
+                <?php echo $this->element->password->renderErrors() ?>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <?php echo $this->element->login->renderViewHelper() ?>
+            </td>
+        </tr>
+    </table>
+</form>

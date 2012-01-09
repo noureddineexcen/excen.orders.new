@@ -1,0 +1,45 @@
+<form enctype="application/x-www-form-urlencoded" 
+    method="<?php echo $this->escape($this->element->getMethod()) ?>" 
+    action="<?php echo $this->escape($this->element->getAction()) ?>">
+    <table class="zend-form">
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <?php echo $this->element->id->renderViewHelper() ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo $this->element->name->renderLabel() ?>
+            </td>
+            <td>
+                <?php echo $this->element->name->renderViewHelper() ?>
+                <?php echo $this->element->name->renderErrors() ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo $this->element->email->renderLabel() ?>
+            </td>
+            <td>
+                <?php echo $this->element->email->renderViewHelper() ?>
+                <?php echo $this->element->email->renderErrors() ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo $this->element->comment->renderLabel() ?>
+            </td>
+            <td>
+                <?php echo $this->element->comment->renderViewHelper() ?>
+                <?php echo $this->element->comment->renderErrors() ?>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <?php echo $this->element->opslaan->renderViewHelper() ?>
+            </td>
+        </tr>
+    </table>
+</form>
